@@ -1,0 +1,12 @@
+bin/
+obj/
+.json
+.dll
+.pdb
+.cache
+.cs
+.codekit3
+wwwroot/.DS_Store
+*.codekit3
+*.dll
+*.dll
