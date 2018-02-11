@@ -1,0 +1,412 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    ViewBag.MetaDescription = "Dashboard Description";
+}
+
+@section Utilities {
+<div class="wrapper-utilities">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<nav class="nav nav-tabs">
+					<a href="javascript:void(0)" class="nav-item nav-link active"><i data-feather="star"></i> Goals</a>
+					<a href="javascript:void(0)" class="nav-item nav-link"><i data-feather="phone-incoming"></i> Recipients</a>
+					<a href="javascript:void(0)" class="nav-item nav-link"><i data-feather="phone"></i> Calls</a>
+				</nav>
+			</div>
+			<div class="col-md text-right">
+				<a class="btn btn-ghost btn-sm" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal"><div data-toggle="tooltip" data-placement="top" title="Link to Google Analytics"><i data-feather="link-2"></i></i></div></a>
+				<a class="btn btn-ghost btn-sm" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Export CSV"><i data-feather="download"></i></a>
+				<div class="dropdown d-inline-block">
+					<a class="btn btn-ghost btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i data-feather="calendar"></i> Past 2 weeks
+					</a>
+				    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				        <a class="dropdown-item" href="javascript:void(0)">Past Week</a>
+				        <a class="dropdown-item" href="javascript:void(0)">Past 2 Weeks</a>
+				        <a class="dropdown-item" href="javascript:void(0)">Past Month</a>
+				        <a class="dropdown-item" href="javascript:void(0)">Past 3 Months</a>
+				        <a class="dropdown-item" href="javascript:void(0)">Past 6 Months</a>
+				        <a class="dropdown-item" href="javascript:void(0)">Past Year</a>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+}
+
+<div class="container-fluid">
+	
+	<div class="card-deck mb-4">
+		<div class="card">
+			<div class="card-header">
+				<h3>Card Header</h3>
+			</div>
+			<div class="card-body">
+				Chart
+			</div>
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th class="text-right">Previous</th>
+						<th class="text-right">Current</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Linked In</td>
+						<td class="text-right">531</td>
+						<td class="text-right"><b>152</b></td>
+					</tr>
+					<tr>
+						<td>Instagram</td>
+						<td class="text-right">643</td>
+						<td class="text-right"><b>432</b></td>
+					</tr>
+					<tr>
+						<td><b>Total</b></td>
+						<td class="text-right">4321</td>
+						<td class="text-right"><b>1243</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h3>Card Header</h3>
+			</div>
+			<div class="card-body">
+				Chart
+			</div>
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th class="text-right">Previous</th>
+						<th class="text-right">Current</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Linked In</td>
+						<td class="text-right">531</td>
+						<td class="text-right"><b>152</b></td>
+					</tr>
+					<tr>
+						<td>Instagram</td>
+						<td class="text-right">643</td>
+						<td class="text-right"><b>432</b></td>
+					</tr>
+					<tr>
+						<td><b>Total</b></td>
+						<td class="text-right">4321</td>
+						<td class="text-right"><b>1243</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h3>Card Header</h3>
+			</div>
+			<div class="card-body">
+				Chart
+			</div>
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th class="text-right">Previous</th>
+						<th class="text-right">Current</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Linked In</td>
+						<td class="text-right">531</td>
+						<td class="text-right"><b>152</b></td>
+					</tr>
+					<tr>
+						<td>Instagram</td>
+						<td class="text-right">643</td>
+						<td class="text-right"><b>432</b></td>
+					</tr>
+					<tr>
+						<td><b>Total</b></td>
+						<td class="text-right">4321</td>
+						<td class="text-right"><b>1243</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<div class="card">
+				<div class="card-header">
+					<h3>Card Header</h3>
+				</div>
+				<table class="table table-sm table-hover mt-0" id="sortTable">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th>Time</th>
+							<th>Caller</th>
+							<th>Goals</th>
+							<th>Forwarded To</th>
+							<th>Call Duration</th>
+							<th>&nbsp;</th>
+							<th>Intention</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><i data-feather="phone" class="text-success"></i></td>
+							<td>2018-3-21 12:50 </td>
+							<td class="text-success"><b>084 215 3135</b></td>
+							<td><b>Posts<b></td>
+							<td class="" data-toggle="tooltip" title="083 513 1554">Heinrich Mostert</td>
+							<td class="text-right">5</td>
+							<td><a href="javascript:void(0)"><i data-feather="play-circle"></i></a></td>
+							<td>
+								<a href="javascript:void(0)" class="badge badge-pill badge-success" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lead</a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#">Unclassified</a>	 
+									<a class="dropdown-item" href="#">Question/Follow up</a>
+									<a class="dropdown-item" href="#">Complaint</a>
+									<a class="dropdown-item" href="#">Lead</a>
+									<a class="dropdown-item" href="#">Wrong number</a>
+								</div>
+							</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield-off"></i> Block</a>
+									<a class="dropdown-item" href="#"><i data-feather="tag"></i> Label Caller</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><i data-feather="phone" class="text-success"></i></td>
+							<td>2017-5-22 5:32 </td>
+							<td class="text-success"  data-toggle="tooltip" title="083 513 1554"><b>Arthur Curry</b></td>
+							<td><b>Posts<b></td>
+							<td class=""  data-toggle="tooltip" title="083 513 1554">Raldo Loots</td>
+							<td class="text-right">13</td>
+							<td><a href="javascript:void(0)"><i data-feather="play-circle"></i></a></td>
+							<td>
+								<a href="javascript:void(0)" class="badge badge-pill badge-success" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lead</a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#">Unclassified</a>	 
+									<a class="dropdown-item" href="#">Question/Follow up</a>
+									<a class="dropdown-item" href="#">Complaint</a>
+									<a class="dropdown-item" href="#">Lead</a>
+									<a class="dropdown-item" href="#">Wrong number</a>
+								</div>
+							</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield-off"></i> Block</a>
+									<a class="dropdown-item" href="#"><div class="label-link"></div>Edit Label</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><i data-feather="phone-missed" class="text-danger"></i></td>
+							<td>2016-5-22 7:13 </td>
+							<td class="text-danger"><b>084 215 3135</b></td>
+							<td><b>Profile Contact Details<b></td>
+							<td class="" data-toggle="tooltip" title="083 513 1554">Attie Gelderblom</td>
+							<td class="text-right">-</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield-off"></i> Block</a>
+									<a class="dropdown-item" href="#"><i data-feather="tag"></i> Label Caller</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><i data-feather="phone" class="text-success"></i></td>
+							<td>2014-5-22 5:31 </td>
+							<td class="text-success"><b>084 215 3135</b></td>
+							<td><b>Profile Contact Details<b></td>
+							<td class="" data-toggle="tooltip" title="083 513 1554">Attie Gelderblom</td>
+							<td class="text-right">3</td>
+							<td><a href="javascript:void(0)"><i data-feather="play-circle"></i></a></td>
+							<td>
+								<a href="javascript:void(0)" class="badge badge-pill badge-success" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lead</a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#">Unclassified</a>	 
+									<a class="dropdown-item" href="#">Question/Follow up</a>
+									<a class="dropdown-item" href="#">Complaint</a>
+									<a class="dropdown-item" href="#">Lead</a>
+									<a class="dropdown-item" href="#">Wrong number</a>
+								</div>
+							</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield-off"></i> Block</a>
+									<a class="dropdown-item" href="#"><i data-feather="tag"></i> Label Caller</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><i data-feather="phone" class="text-success"></i></td>
+							<td>2017-5-22 2:43 </td>
+							<td class="text-success"><b>084 215 3135</b></td>
+							<td><b>Posts<b></td>
+							<td class="" data-toggle="tooltip" title="083 513 1554">Angelique Seymoure</td>
+							<td class="text-right">4</td>
+							<td><a href="javascript:void(0)"><i data-feather="play-circle"></i></a></td>
+							<td>
+								<a href="javascript:void(0)" class="badge badge-pill badge-success" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lead</a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#">Unclassified</a>	 
+									<a class="dropdown-item" href="#">Question/Follow up</a>
+									<a class="dropdown-item" href="#">Complaint</a>
+									<a class="dropdown-item" href="#">Lead</a>
+									<a class="dropdown-item" href="#">Wrong number</a>
+								</div>
+							</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield-off"></i> Block</a>
+									<a class="dropdown-item" href="#"><i data-feather="tag"></i> Label Caller</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><i data-feather="phone-off"></i></td>
+							<td>2014-5-22 12:50 </td>
+							<td class="text-dark"><b>084 215 3135</b></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="text-right"></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="text-right">
+								<a href="#" class="btn btn-action" role="button" id="optionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="dropdown-menu" aria-labelledby="optionsLink">
+									<a class="dropdown-item" href="#"><i data-feather="shield"></i> Unblock</a>
+									<a class="dropdown-item" href="#"><i data-feather="tag"></i> Label Caller</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<a href="javascript:void(0)" class="floated-btn"><i class="fas fa-plus fa-2x text-white"></i></a>
+
+@section Scripts {
+	<script>
+        $(document).ready(function () {
+	
+			if($('#sortTable')[0]) {
+		
+		        // Add custom buttons
+		        var dataTableButtons =  '<div class="actions">' + 
+										  '<button type="button" class="btn btn-action" data-table-action="print"><i class="fas fa-print"></i></button>' +
+										  '<button type="button" class="btn btn-action mx-1" data-table-action="fullscreen"><i class="fas fa-expand"></i></button>' +
+										  '<div class="d-inline-block" role="group">' +
+										    '<button id="btnGroupDrop1" type="button" class="btn btn-action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-download"></i></button>' +
+										    '<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">' +
+										      '<a class="dropdown-item" href="#" data-table-action="excel">Excel (.xlsx)</a>' +
+										      '<a class="dropdown-item" href="#" data-table-action="csv">CSV (.csv)</a>' +
+										    '</div>' +
+										  '</div>' +
+										'</div>';
+		
+		        // Initiate data-table
+		        $('#sortTable').DataTable({
+		            autoWidth: false,
+		            responsive: true,
+		            lengthMenu: [[15, 30, 45, -1], ['15 Rows', '30 Rows', '45 Rows', 'Everything']], //Length select
+		            language: {
+		                searchPlaceholder: "Search for records..." // Search placeholder
+		            },
+		            dom: 'Blfrtip',
+		            buttons: [ // Data table buttons for export and print
+		                {
+		                    extend: 'excelHtml5',
+		                    title: 'Export Data'
+		                },
+		                {
+		                    extend: 'csvHtml5',
+		                    title: 'Export Data'
+		                },
+		                {
+		                    extend: 'print',
+		                    title: 'Goal Breakdown'
+		                }
+		            ],
+		            "initComplete": function(settings, json) {
+		                $(this).closest('.dataTables_wrapper').prepend(dataTableButtons); // Add custom button (fullscreen, print and export)
+		            },
+                "bPaginate": false,
+                "bLengthChange": false,
+                "bFilter": false,
+                "bSort": true,
+                "bInfo": false,
+                "bAutoWidth": false,
+                "order": [[3, "desc"]],
+                "aoColumns": [
+                    { "bSortable": false },
+                    { "bSortable": true },
+                    { "bSortable": true },
+                    { "bSortable": false },
+                    { "bSortable": true },
+                    { "bSortable": true },
+                    { "bSortable": false },
+                    { "bSortable": true },
+                    { "bSortable": false }
+                ]
+		        });
+		
+		        // Data table button actions
+		        $('body').on('click', '[data-table-action]', function (e) {
+		            e.preventDefault();
+		
+		            var exportFormat = $(this).data('table-action');
+		
+		            if(exportFormat === 'excel') {
+		                $(this).closest('.dataTables_wrapper').find('.buttons-excel').trigger('click');
+		            }
+		            if(exportFormat === 'csv') {
+		                $(this).closest('.dataTables_wrapper').find('.buttons-csv').trigger('click');
+		            }
+		            if(exportFormat === 'print') {
+		                $(this).closest('.dataTables_wrapper').find('.buttons-print').trigger('click');
+		            }
+		            if(exportFormat === 'fullscreen') {
+		                var parentCard = $(this).closest('.card');
+		
+		                if(parentCard.hasClass('card--fullscreen')) {
+		                    parentCard.removeClass('card--fullscreen');
+		                    $('body').removeClass('data-table-toggled');
+		                }
+		                else {
+		                    parentCard.addClass('card--fullscreen')
+		                    $('body').addClass('data-table-toggled');
+		                }
+		            }
+		        });
+		    }
+		});
+    </script>
+}

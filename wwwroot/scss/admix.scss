@@ -1,0 +1,46 @@
+/*!
+ * AdMix v1.0.0 (https://admix.io)
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ */
+
+// Font Smoothing 
+html, html a, body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004); 
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Nunito:700,900');
+@import "fonts/admix";
+@import "fonts/admix-talk";
+@import "fonts/feather";
+@import "fonts/os-icon";
+
+// Theme
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "skin/theme";
+
+// Bootstrap
+@import "bootstrap/bootstrap";
+
+// Bootstrap Overrides
+@import "bootstrap-override/buttons";
+@import "bootstrap-override/cards";
+@import "bootstrap-override/dropdown";
+@import "bootstrap-override/navbar";
+@import "bootstrap-override/tables";
+@import "bootstrap-override/tabs";
+@import "bootstrap-override/tooltip";
+@import "bootstrap-override/typography"; 
+
+// Vendor Overrides
+@import "vendor-override/data-tables";
+
+// Skin
+@import "skin/color";
+@import "skin/icons";
+@import "skin/layout";
+@import "skin/pricing";
+@import "skin/sections";
+ 

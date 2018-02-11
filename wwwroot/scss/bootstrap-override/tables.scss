@@ -1,0 +1,39 @@
+.table {
+	thead, tbody, tfoot {
+		th, td {
+			vertical-align: middle;
+		}
+	}
+	th {
+		font-family: $headings-font-family;
+		font-weight: 700;
+		background: $gray-100;
+		border-width: 1px !important;
+		font-size: $font-size-sm;
+		color: $gray-500;
+		h2, h3, h4 {
+			margin-bottom: 0;
+		}
+	}
+	td {
+		b {
+			font-family: $headings-font-family;
+		}
+		.fa-times {
+			color: $gray-500;
+		}
+	}
+	
+	// Price Compare
+	&.pricing-compare {
+		th {
+			text-align: center; 
+		}
+		td {
+			text-align: center;
+			h2 {
+				@extend .gradient-text;
+			} 
+		}
+	}
+}

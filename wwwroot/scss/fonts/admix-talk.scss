@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'admix-talk';
+  src:  url('../fonts/talk.eot?yq70eo');
+  src:  url('../fonts/talk.eot?yq70eo#iefix') format('embedded-opentype'),
+    	url('../fonts/talk.ttf?yq70eo') format('truetype'),
+		url('../fonts/talk.woff?yq70eo') format('woff'),
+		url('../fonts/talk.svg?yq70eo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="talk-"], [class*=" talk-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'admix-talk' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -2px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.talk-company:before { content: '\e800'; }
+.talk-accepted:before { content: '\e801'; }
+.talk-blocked-calls:before { content: '\e803'; } 
+.talk-blocked-number:before { content: '\e804'; } 
+.talk-calendar:before { content: '\e805'; } 
+.talk-call-flow:before { content: '\e806'; } 
+.talk-call-flows:before { content: '\e807'; } 
+.talk-call-log:before { content: '\e808'; } 
+.talk-callee:before { content: '\e809'; } 
+.talk-caller:before { content: '\e80a'; } 
+.talk-channels:before { content: '\e80b'; } 
+.talk-dashboard:before { content: '\e80c'; } 
+.talk-delete:before { content: '\e80d'; } 
+.talk-edit:before { content: '\e80e'; } 
+.talk-exports:before { content: '\e80f'; } 
+.talk-group:before { content: '\e810'; } 
+.talk-help:before { content: '\e811'; } 
+.talk-ifttt:before { content: '\e812'; } 
+.talk-insights:before { content: '\e813'; } 
+.talk-ivr:before { content: '\e814'; } 
+.talk-label-caller:before { content: '\e815'; } 
+.talk-missed-calls:before { content: '\e816'; } 
+.talk-more:before { content: '\e817'; } 
+.talk-person:before { content: '\e818'; } 
+.talk-profiles:before { content: '\e819'; } 
+.talk-secondary-solid:before { content: '\e81a'; } 
+.talk-secondary:before { content: '\e81b'; } 
+.talk-setup:before { content: '\e81c'; } 
+.talk-star:before { content: '\e81d'; } 
+.talk-switch-board:before { content: '\e81e'; } 
+.talk-text-message:before { content: '\e81f'; } 
+.talk-user:before { content: '\e820'; } 

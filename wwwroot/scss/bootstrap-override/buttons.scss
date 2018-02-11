@@ -1,0 +1,143 @@
+$radius-circle: 	50%;
+$radius-rounded: 	2rem;
+$btn-height:		36px;
+$btn-height-sm:		26.59px;
+$btn-height-lg:		36px;
+
+.btn {
+	font-family: $headings-font-family;
+	//text-transform: uppercase;
+	
+	// Ghost buttons
+	&.btn-ghost {
+		background: rgba($white,0.2);
+		color: $white;
+		border-color: rgba($white,0.2);
+		box-shadow: none;
+		&:hover {
+			background: rgba($white,0.3);
+		}
+	}
+	
+	// Rounded
+	&.btn-rounded {
+		border-radius: $radius-rounded;
+	}
+	
+	// Circle
+	&.btn-circle {
+		border-radius: $radius-circle;
+	}
+	
+	// Square & Circle
+	&.btn-square,
+	&.btn-circle {
+		width: $btn-height;
+		padding: $input-btn-padding-y;
+		min-width: 0;
+	}
+	
+	// Action 
+	&.btn-action {
+        background-color: transparent;
+        box-shadow: none;
+        width: $btn-height;
+		padding: $input-btn-padding-y;
+		min-width: 0;
+		color: $body-color;
+		border-radius: $radius-circle !important;
+        &:focus,
+	    &:active,
+	    &:hover{
+		    background: rgba($black,0.1);
+		}
+		&.light {
+			color: $white;
+			&:focus,
+		    &:active,
+		    &:hover{
+			    background: rgba($white,0.1);
+			}
+		}
+    }
+    
+    // Overwrrite
+	&.btn-light,
+	&.btn-white {
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: 0 14px 26px -12px rgba($black,.42), 0 4px 23px 0 rgba($black,.12), 0 8px 10px -5px rgba($black,.2) !important;
+		}
+	}
+}
+
+.floated-btn {
+    z-index: 9999;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: linear-gradient(135deg, #af74e2, #7b50c4);
+    box-shadow: 3px 3px 15px rgba($black, 0.2), 6px 6px 25px rgba($black, 0.2);
+    border-radius: 50%;
+    color: $white;
+    display: flex;
+    width: 75px;
+    height: 75px;
+    transition: $transition-base;
+    text-align: center;
+	.svg-inline--fa {
+	    position: absolute;
+	    top: 22px;
+	    left: 24px;
+	}
+    &:hover {
+	    background: linear-gradient(135deg, #7b50c4, #af74e2);
+	    box-shadow: 3px 3px 5px rgba($black, 0.2), 6px 6px 10px rgba($black, 0.2)
+    }
+    &:active {
+		box-shadow: none;
+		outline: none;
+    }
+}
+
+// Shadow
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: 0 14px 26px -12px rgba($value,.42), 0 4px 23px 0 rgba($value,.12), 0 8px 10px -5px rgba($value,.2);
+			background-color: $value;
+			border-color: $value;
+		}
+	}
+}
+
+
+// Social buttons
+@mixin social-buttons-color ($color){
+    background-color: $color;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba($color,0.2), 0 3px 1px -2px rgba($color,0.2), 0 1px 5px 0 rgba($color,0.2);
+
+    &:focus,
+    &:active,
+    &:hover{
+        background-color: $color;
+        color: #fff;
+        box-shadow: 0 14px 26px -12px rgba($color,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba($color,.2);
+    }
+    &.btn-simple {
+        color: $color;
+        background-color: transparent;
+        box-shadow: none;
+        @include transition($transition-base);
+        &:focus,
+	    &:active,
+	    &:hover{
+		    background-color: $color;
+			color: #fff;
+		}
+    }
+}

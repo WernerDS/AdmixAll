@@ -1,0 +1,43 @@
+
+// Social Colors
+@mixin social-bg-color ($color){
+    background-color: $color;
+    color: #fff;
+}
+.bg-facebook {
+	@include social-bg-color($social-facebook);
+}
+.bg-twitter {
+	@include social-bg-color($social-twitter);
+}
+.bg-pinterest {
+	@include social-bg-color($social-pinterest);
+}
+.bg-google {
+	@include social-bg-color($social-google);
+}
+.bg-linkedin {
+	@include social-bg-color($social-linkedin);
+}
+.bg-dribbble {
+	@include social-bg-color($social-dribbble);
+}
+.bg-github {
+	@include social-bg-color($social-github);
+}
+.bg-youtube {
+	@include social-bg-color($social-youtube);
+}
+.bg-instagram {
+	@include social-bg-color($social-instagram);
+}
+.bg-reddit {
+	@include social-bg-color($social-reddit);
+}
+.bg-tumblr {
+	@include social-bg-color($social-tumblr);
+}
+.bg-behance {
+	@include social-bg-color($social-behance);
+}
+

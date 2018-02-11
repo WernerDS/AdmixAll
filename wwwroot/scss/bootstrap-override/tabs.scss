@@ -1,0 +1,21 @@
+.wrapper-utilities {
+	.nav-tabs {
+		border-bottom: none;
+		.nav-link {
+			background: rgba($white,0.2);
+			font-family: $headings-font-family;
+			border: none;
+			margin: 0 .25rem 0 0;
+			color: $white;
+			transition: $transition-base;
+			&:hover {
+				background: $body-bg;
+				color: $body-color;
+			}
+			&.active {
+				background: $body-bg;
+				color: $body-color;
+			}
+		}
+	}
+}

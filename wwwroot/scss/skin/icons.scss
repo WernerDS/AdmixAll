@@ -1,0 +1,43 @@
+.demo-icons-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+	    width: 80px;
+	    text-align: center;
+	    display: inline-block;
+	    font-size: 24px;
+	    vertical-align: middle;
+	    padding: 20px 15px;
+	    border-right: 1px solid rgba(0,0,0,0.05);
+	    border-bottom: 1px solid rgba(0,0,0,0.05);
+	    a {
+		    position: relative;
+		    color: $body-color;
+		    span {
+			    display: inline-block;
+			    position: absolute;
+			    background-color: $black;
+			    color: $white;
+			    padding: 4px 7px;
+			    border-radius: $border-radius;
+			    font-size: .81rem;
+			    white-space: nowrap;
+			    top: -30px;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    display: none;
+			    font-family: $headings-font-family;
+			}
+			&:hover {
+				color: $danger;
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+}

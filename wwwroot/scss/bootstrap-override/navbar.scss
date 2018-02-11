@@ -1,0 +1,44 @@
+.navbar {
+	padding-top: $spacer;
+	padding-bottom: $spacer;
+	transition: $transition-base;
+	box-shadow: 0 2px 5px 0 rgba(30,30,30,.09);
+	.navbar--scrolled & {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.dropdown-item {
+		font-family: $headings-font-family;
+		font-weight: 700;
+	}
+}
+
+.navbar-brand {
+	padding-left: 50px;
+	font-family: $headings-font-family;
+	i {
+		position: absolute;
+		left: 0;
+		top: 4px;
+		font-size: 2rem;
+	}
+}
+
+.navbar-nav {
+	.nav-item {
+		margin: 0 2px;
+		.nav-link {
+			text-transform: uppercase;
+			font-family: $headings-font-family;
+			font-size: $font-size-sm;
+			transition: $transition-base;
+			font-weight: 700;
+			position: relative;
+			&:hover {
+			}
+			&.active {
+				
+			}
+		}
+	}
+}

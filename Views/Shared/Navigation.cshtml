@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light">
+    <div class="container-fluid">
+	    <div class="dropdown">
+	        <a class="navbar-brand" href="/" alt="AdMix" data-toggle="dropdown"><i class="admix-logo"></i> AdMix<span class="portal"></span></a>
+	        <div class="dropdown-menu dropright" aria-labelledby="dLabel">
+		        <a href="" class="dropdown-item themes__item active" data-sa-value="1"><i data-feather="phone"></i> Talk</a>
+		        <a href="" class="dropdown-item themes__item" data-sa-value="2"><i class="os-icon os-icon-robot-1" style="font-size: 19px;width: 1.2rem;height: 1.2rem;"></i> AI Chat</a>
+		        <a href="" class="dropdown-item themes__item" data-sa-value="3"><i data-feather="file-text"></i> Forms</a>
+		        <a href="" class="dropdown-item themes__item" data-sa-value="4"><i data-feather="mail"></i> Messages</a>
+		        <a href="" class="dropdown-item themes__item" data-sa-value="5"><i data-feather="trending-up"></i> Stock</a>
+	        </div>
+	    </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+			<span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNav">
+			@await Html.PartialAsync("LoginPartial")
+  		</div>
+    </div>
+</nav>

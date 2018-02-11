@@ -1,0 +1,139 @@
+// AdMix Colors
+$talk-primary: 			#44B288;
+$talk-secondary: 		#0DEA6A;
+$chat-primary: 			#27BFFE;
+$chat-secondary: 		#20E9D4;
+$forms-primary: 		#6444B2;
+$forms-secondary: 		#CB0DEA;
+$messages-primary: 		#ED5D5D;
+$messages-secondary: 	#F09819;
+$stock-primary: 		#007BFF;
+$stock-secondary: 		#6F42C1;
+
+// Social Colors
+$social-facebook: 			#3b5998;
+$social-twitter: 			#55acee;
+$social-pinterest: 			#cc2127;
+$social-google: 			#dd4b39;
+$social-linkedin: 			#0976b4;
+$social-dribbble: 			#ea4c89;
+$social-github: 			#333333;
+$social-youtube: 			#e52d27;
+$social-instagram: 		    #125688;
+$social-reddit: 			#ff4500;
+$social-tumblr: 			#35465c;
+$social-behance: 			#1769ff;
+
+$gradient-degree:     	225deg;
+
+$theme-bgs: (
+  1: ($talk-primary, $talk-secondary, 'Talk'),
+  2: ($chat-primary, $chat-secondary, 'AI Chat'),
+  3: ($forms-primary, $forms-secondary, 'Forms'),
+  4: ($messages-primary, $messages-secondary, 'Messages'),
+  5: ($stock-primary, $stock-secondary, 'Stock')
+);
+
+[data-sa-theme] {
+  transition: $transition-base;
+}
+
+@each $bg, $value in $theme-bgs {
+	$color: nth($value, 1);
+	$colorsec: nth($value, 2);
+	$portal: nth($value, 3);
+	
+	[data-sa-theme="#{$bg}"] {
+		// Body
+		&.gradient {
+			background: linear-gradient($gradient-degree,$color,$colorsec);
+		}
+		
+		// Gradient
+		.gradient {
+			background: linear-gradient($gradient-degree,$color,$colorsec);
+			color: $white;
+		}
+		
+		.gradient-text {
+			background: -webkit-linear-gradient(left, $color, $colorsec);
+			background: linear-gradient(left, $color, $colorsec);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		
+		// Portal
+		.portal {
+			&:before {
+				content: "#{$portal}";
+			}
+		}
+		
+		// Navbar
+		.navbar-brand {
+			span {
+				color: $color;
+			}
+			i {
+				color: $color;
+			}
+		}
+		
+		// Gradient
+		.gradient {
+			background: linear-gradient($gradient-degree,$color,$colorsec);
+			color: $white;
+		}
+		
+		// Backgrounds
+		.bg-primary,
+		.progress-bar {
+			background-color: $color !important;
+		}
+		
+		// Primary
+		.text-primary {
+			color: $color !important;
+		}
+		.btn-link {
+			color: $color;
+		}
+		.btn-primary {
+			background-color: $color;
+			border-color: $color;
+			color: $white;
+			//box-shadow: 0 2px 2px 0 rgba($color, 0.2), 0 3px 1px -2px rgba($color, 0.2), 0 1px 5px 0 rgba($color, 0.2);
+			&:hover,
+			&:active {
+				background-color: $color !important;
+				border-color: $color !important;
+				box-shadow: 0 14px 26px -12px rgba($color, 0.42), 0 4px 23px 0 rgba($color, 0.12), 0 8px 10px -5px rgba($color, 0.2);
+			}
+			&:focus {
+				background-color: $color !important;
+				border-color: $color !important;
+				box-shadow: 0 0 0 0.2rem rgba($color, 0.5) !important;
+			}
+		}
+		.btn-outline-primary {
+			color: $color;
+			border-color: $color;
+			&:hover,
+			&:active {
+				background-color: $color !important;
+				border-color: $color !important;
+			}
+			&:focus {
+				background-color: $color !important;
+				border-color: $color !important;
+				box-shadow: 0 0 0 0.2rem rgba($color, 0.5) !important;
+			}
+		}
+		
+		// Dropdowns
+		.dropdown-item.active, 
+		.dropdown-item:active {
+			background-color: $color;
+		}
+	}
+}

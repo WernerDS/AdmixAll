@@ -1,0 +1,12 @@
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/app.db
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/admixArk.deps.json
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/admixArk.runtimeconfig.json
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/admixArk.runtimeconfig.dev.json
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/admixArk.dll
+/Users/cantusstar/Sites/admixArk/bin/Debug/netcoreapp2.0/admixArk.pdb
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/admixArk.csproj.CoreCompileInputs.cache
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/admixArk.AssemblyInfoInputs.cache
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/admixArk.AssemblyInfo.cs
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/admixArk.dll
+/Users/cantusstar/Sites/admixArk/obj/Debug/netcoreapp2.0/admixArk.pdb
